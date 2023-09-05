@@ -1,0 +1,238 @@
+$primary: #E6CAFF;
+$Secondary: #FFB5B5;
+$lightblue: #C4E1FF;
+$darkpurple: #CA8EFF;
+
+
+@import "../bootstrap/scss/bootstrap.scss";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: font1;
+}
+
+
+
+/* ------------------------------------------------------ */
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+TC&family=Rampart+One&family=Yomogi&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+TC&family=Rampart+One&family=Rubik+Puddles&family=Yomogi&display=swap');
+/* font-family: 'Rubik Puddles',cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Hachi+Maru+Pop&family=Noto+Sans+TC&family=Rampart+One&family=Rubik+Puddles&family=Yomogi&display=swap');
+
+/* font-family: 'Bungee Shade',cursive; */
+@font-face {
+    font-family: font1;
+    src: url('../font/sjis_sp_setofont.ttf');
+}
+
+/*  -------------------------------------------------------*/
+/* body{
+    background: url('/img/背景2.png'); 
+} */
+body {
+    position: relative;
+}
+
+
+/* ------------------------- */
+.line {
+    height: 50px;
+    background: url("/img/花草.png");
+    background-repeat: space;
+    background-size: contain;
+
+}
+
+.header {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background: url("/img/女孩喝茶.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.timeBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    left: calc(40% - 100px);
+    background: $lightblue;
+    padding: 20px;
+    opacity: .5;
+    z-index: 2;
+    border-radius: 50px;
+
+}
+
+/*  -------------------------------------------------------*/
+.mainBox {
+    display: flex;
+    justify-content: center;
+}
+
+.mainBox::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/背景2.png');
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: .8;
+    z-index: -1;
+}
+
+
+/* 選單 */
+.list {
+    text-align: end;
+    padding-bottom: 10px;
+}
+
+/* 萬年曆 */
+.calendar {
+    display: block;
+    margin: 20px 50px 50px 50px;
+    padding: 20px;
+    // padding: 50px;
+    border: 30px solid transparent;
+    border-image: url("/img/康乃馨.svg") 110 round;
+
+    .today {
+        font-weight: 700;
+
+        background: $Secondary;
+        border-radius: 50%;
+        color: rgb(5, 60, 161);
+    }
+
+    .satday {
+        background-color: $primary;
+        border-radius: 50%;
+        color: white;
+    }
+
+    .sunday {
+        background-color: #C4E1FF;
+        border-radius: 50%;
+        color: white;
+    }
+
+    th {
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 10px;
+        color: $darkpurple;
+    }
+}
+
+.calendar {
+    tr {
+        td {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            color: #5B5B5B;
+        }
+    }
+}
+
+/* 樣式 */
+.touch {
+    &:hover {
+        font-weight: 700;
+        background: white;
+        color: black;
+    }
+
+    &:active {
+        font-weight: 700;
+        border-radius: 50%;
+        background: $darkpurple;
+        color: white;
+    }
+}
+
+/*  -------------------------------------------------------*/
+.aside {
+    margin-left: 50px;
+    width: 300px;
+
+}
+
+.title {
+    margin: 30px 50px 20px 100px;
+}
+
+#noteListUl {
+    list-style: url("../img/企鵝.png") none inside;
+    // list-style-image: url('../img/企鵝.png');
+
+}
+
+.red {
+    background-color: $primary;
+}
+
+.yellow {
+    background-color: $Secondary;
+}
+
+.green {
+    background-color: $lightblue;
+}
+
+
+
+.noteLi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 20px;
+    padding: 5px;
+    margin-block: 5px;
+
+    span {
+        flex-wrap: wrap;
+        margin-left: 20px;
+    }
+
+    button {
+        background: transparent;
+        border: transparent;
+
+        &:active .noteLi {
+            display: none;
+        }
+    }
+
+    i {
+        font-size: 16px;
+        opacity: .2;
+        padding-right: 10px;
+    }
+
+    i:hover {
+        opacity: 1;
+    }
+
+
+}

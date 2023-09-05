@@ -1,0 +1,91 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>萬年曆</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./css/self.css" />
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body onload="time()">
+	<div class="box">
+		<header class="header">
+			<div class="timeBox">
+				<h3 id="today">今天日期</h3>
+				<h1 id="nowTime">時間</h1>
+			</div>
+		</header>
+		<!-- ----------------------------------- -->
+		<div class="line"></div>
+		<div class="mainBox">
+			<main class="calendar">
+				<!-- 萬年曆選單 -->
+				<div class="list">
+					<label for="">
+						西元
+						<select name="yearChange" id="yearChange">
+							<!-- 年份的選項 -->
+							<option value="2023">2023</option>
+						</select>
+						年
+					</label>
+					<label for="">
+						<!-- 1~12 -->
+						<select name="monthChange" id="monthChange">
+							<!-- 月份的選項 -->
+							<option value="5">5</option>
+						</select>
+						月
+					</label>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody id="calendar"></tbody>
+				</table>
+			</main>
+			<!-- 點擊 出現 行事曆介面 -->
+
+
+			<!-- to do-------------------------------------- -->
+			<aside class="aside">
+				<h3 class="title">To do</h3>
+				<div class="input-group mb-3">
+					<input type="text" id="inputMemo" class="form-control" placeholder="add todo" aria-label="add todo"
+						aria-describedby="noteButton">
+					<button class="btn btn-outline-primary" type="button" id="noteButton">add</button>
+				</div>
+				<div id="noteList" class="noteList">
+					<ul id="noteListUl" class="noteListUl">
+						<!-- JS 加入li -->
+					</ul>
+				</div>
+			</aside>
+		</div>
+	</div>
+	<img src="./img/企鵝.png" alt="">
+
+
+
+
+	<script src="./js/index copy.js"></script>
+	<script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

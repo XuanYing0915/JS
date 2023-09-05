@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>授權碼 CWB-D8242FEA-A5CD-4937-8ABC-B6EF4A4F867C
+
+
+
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js">
+    </script>
+    <script>
+        let weather = new XMLHttpRequest();
+        let url = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-065?Authorization=CWB-D8242FEA-A5CD-4937-8ABC-B6EF4A4F867C&elementName=PoP12h,AT,T,RH,WeatherDescription';
+        // weather.open('GET', url, true);
+        // weather.onload = function () {
+        //     if (this.status >= 4 && this.status === 200) {
+        //         let response = JSON.parse(this.response);
+        //         console.log(response);
+        //     }
+        // };
+
+        fetch(url)
+            // 拆解到沒有 
+            .then(function (response) {
+                return response.json();
+            }).then(function (response) {
+                console.log(response.records.locations[0].location[28].weatherElement[3].time[31].elementValue[0].value);
+            })
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
